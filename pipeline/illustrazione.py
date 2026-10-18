@@ -9,7 +9,6 @@ la copertina colorata con l'emoji.
 from __future__ import annotations
 
 import json
-import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -56,18 +55,37 @@ nessun filtro o animazione;
 - meno di 150 elementi in tutto, codice compatto."""
 
 
-def _svg_sicuro(svg: str) -> bool:
+def _estrai_svg(testo: str) -> str | None:
+    """Tiene solo il blocco <svg>...</svg>, scartando intestazioni XML, commenti o markdown."""
+    inizio = testo.find("<svg")
+    fine = testo.rfind("</svg>")
+    if inizio == -1 or fine == -1:
+        return None
+    return testo[inizio:fine + len("</svg>")]
+
+
+def _motivo_svg_non_sicuro(svg: str) -> str | None:
+    if len(svg) > MAX_CARATTERI_SVG:
+        return f"troppo lungo ({len(svg)} caratteri)"
     minuscolo = svg.lower()
-    vietati = ("<script", "<text", "<image", "<foreignobject", "href=\"http", "href='http", "javascript:")
-    return (
-        minuscolo.lstrip().startswith("<svg")
-        and minuscolo.rstrip().endswith("</svg>")
-        and len(svg) <= MAX_CARATTERI_SVG
-        and not any(v in minuscolo for v in vietati)
-    )
+    vietati = ("<script", "<text ", "<text>", "<image", "<foreignobject", "href=\"http", "href='http", "javascript:")
+    for vietato in vietati:
+        if vietato in minuscolo:
+            return f"contiene {vietato.strip()}"
+    return None
 
 
-def disegna_svg(storia: dict) -> str | None:
+def disegna_svg(storia: dict, tentativi: int = 2) -> str | None:
+    for tentativo in range(1, tentativi + 1):
+        svg = _disegna_una_volta(storia)
+        if svg:
+            return svg
+        if tentativo < tentativi:
+            print("  Riprovo il disegno...")
+    return None
+
+
+def _disegna_una_volta(storia: dict) -> str | None:
     testo = storia["en"]
     richiesta = (
         f"Storia di oggi ({storia['categoria']}, {testo['luogo']}):\n"
@@ -92,11 +110,13 @@ def disegna_svg(storia: dict) -> str | None:
         print(f"  ! illustrazione non generata ({risposta.stop_reason})")
         return None
     testo_json = next(b.text for b in reversed(risposta.content) if b.type == "text")
-    svg = json.loads(testo_json)["svg"].strip()
-    # A volte il modello racchiude il codice in un blocco markdown
-    svg = re.sub(r"^```(?:svg|xml)?\s*|\s*```$", "", svg)
-    if not _svg_sicuro(svg):
-        print("  ! illustrazione scartata: SVG non valido o non sicuro")
+    svg = _estrai_svg(json.loads(testo_json)["svg"])
+    if not svg:
+        print("  ! illustrazione scartata: nessun blocco <svg> nella risposta")
+        return None
+    motivo = _motivo_svg_non_sicuro(svg)
+    if motivo:
+        print(f"  ! illustrazione scartata: {motivo}")
         return None
     return svg
 
