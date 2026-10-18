@@ -39,7 +39,7 @@ struct ArchivioView: View {
 
     private var filtri: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 8) {
+            HStack(spacing: 6) {
                 Chip(testo: String(localized: "Tutte"), selezionato: area == nil) { area = nil }
                 ForEach(Storia.aree, id: \.self) { id in
                     Chip(testo: Storia.nomeArea(id), icona: Storia.iconaArea(id), selezionato: area == id) { area = id }
@@ -59,13 +59,12 @@ private struct Chip: View {
 
     var body: some View {
         Button(action: azione) {
-            Label {
-                Text(verbatim: testo)
-            } icon: {
-                if let icona { Image(systemName: icona) }
+            HStack(spacing: 5) {
+                if let icona { Image(systemName: icona).imageScale(.small) }
+                Text(verbatim: testo).lineLimit(1)
             }
                 .font(.subheadline.weight(.medium))
-                .padding(.horizontal, 14)
+                .padding(.horizontal, 12)
                 .padding(.vertical, 7)
                 .background(selezionato ? Color.accentColor : Color.secondary.opacity(0.15), in: Capsule())
                 .foregroundStyle(selezionato ? .white : .primary)
@@ -82,7 +81,14 @@ struct RigaStoria: View {
             Illustrazione(storia: storia, dimensioneEmoji: 28)
                 .frame(width: 56, height: 56)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 3) {
+                HStack(spacing: 4) {
+                    Image(systemName: Storia.iconaArea(storia.areaEffettiva))
+                    Text(Storia.nomeArea(storia.areaEffettiva))
+                }
+                    .font(.caption2.weight(.bold))
+                    .textCase(.uppercase)
+                    .foregroundStyle(storia.colori.last ?? .accentColor)
                 Text(storia.titolo)
                     .font(.headline)
                     .lineLimit(2)
