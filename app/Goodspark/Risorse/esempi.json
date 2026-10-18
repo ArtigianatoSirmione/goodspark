@@ -1,0 +1,65 @@
+{
+  "aggiornato": null,
+  "storie": [
+    {
+      "id": "esempio-1",
+      "data": "2026-10-18",
+      "categoria": "community",
+      "emoji": "🍲",
+      "fonte_nome": "Contenuto di prova",
+      "fonte_url": "",
+      "minuti_lettura": 1,
+      "it": {
+        "titolo": "Storia di esempio: il quartiere che cucina per tutti",
+        "sottotitolo": "Questo è un testo di prova per vedere come appare una storia nell'app.",
+        "luogo": "Italia",
+        "paragrafi": [
+          "Questa storia non è reale: serve solo a mostrare come sarà l'app prima che arrivi la prima buona notizia generata automaticamente.",
+          "Ogni mattina il sistema sceglierà una notizia vera da fonti affidabili e la racconterà con parole nuove, in tre-cinque paragrafi brevi come questi.",
+          "In fondo troverai sempre il nome della fonte e il link all'articolo originale, così chiunque potrà verificare i fatti.",
+          "Appena la pipeline sarà attiva, questa pagina verrà sostituita dalla storia del giorno."
+        ]
+      },
+      "en": {
+        "titolo": "Sample story: the neighborhood that cooks for everyone",
+        "sottotitolo": "This is placeholder text to show how a story looks in the app.",
+        "luogo": "Italy",
+        "paragrafi": [
+          "This story isn't real: it's here only to show what the app will look like before the first automatically generated good news arrives.",
+          "Every morning the system will pick a true story from trusted sources and tell it in fresh words, in three to five short paragraphs like these.",
+          "At the end you'll always find the source and a link to the original article, so anyone can check the facts.",
+          "As soon as the pipeline is running, this page will be replaced by the story of the day."
+        ]
+      }
+    },
+    {
+      "id": "esempio-2",
+      "data": "2026-10-17",
+      "categoria": "environment",
+      "emoji": "🌳",
+      "fonte_nome": "Contenuto di prova",
+      "fonte_url": "",
+      "minuti_lettura": 1,
+      "it": {
+        "titolo": "Storia di esempio: il bosco che torna a crescere",
+        "sottotitolo": "Un secondo esempio, per vedere l'archivio con più storie.",
+        "luogo": "Italia",
+        "paragrafi": [
+          "Anche questa è una storia di prova, non una notizia reale.",
+          "Nell'archivio le storie appaiono in ordine di data, ognuna con il suo colore in base alla categoria: verde per l'ambiente, azzurro per la scienza, rosa per la gentilezza.",
+          "Puoi aggiungerla ai preferiti toccando il cuore in alto, oppure condividerla con chi ha bisogno di un sorriso."
+        ]
+      },
+      "en": {
+        "titolo": "Sample story: the forest growing back",
+        "sottotitolo": "A second example, to see the archive with more stories.",
+        "luogo": "Italy",
+        "paragrafi": [
+          "This is a placeholder story too, not real news.",
+          "In the archive, stories are listed by date, each with its own color by category: green for environment, blue for science, pink for kindness.",
+          "You can add it to your favorites by tapping the heart at the top, or share it with someone who needs a smile."
+        ]
+      }
+    }
+  ]
+}
