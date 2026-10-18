@@ -16,7 +16,8 @@ from pathlib import Path
 
 import anthropic
 
-LARGHEZZA, ALTEZZA = 1200, 800
+# Quasi quadrata, come la copertina dell'app: così non viene tagliata ai lati
+LARGHEZZA, ALTEZZA = 1200, 1000
 MAX_CARATTERI_SVG = 150_000
 
 SCHEMA_SVG = {
@@ -29,22 +30,30 @@ SCHEMA_SVG = {
 ISTRUZIONI = f"""Sei l'illustratore di Goodspark, un'app che ogni giorno racconta una storia \
 vera e positiva. Disegna la copertina della storia come un unico file SVG.
 
-Stile, sempre uguale per dare un'identità all'app:
-- illustrazione piatta e stilizzata, forme semplici e morbide, come un poster moderno;
-- palette calda e luminosa (pesca, corallo, rosa, giallo sole, verdi e azzurri tenui), \
-con al massimo un paio di sfumature delicate (linearGradient/radialGradient);
+Stile, sempre uguale per dare un'identità all'app: ARTE NAÏF.
+- come un dipinto naïf fatto a mano: colori vivaci e allegri, prospettiva ingenua e \
+appiattita, forme tonde e un po' irregolari, dettagli semplici e affettuosi (fiorellini, \
+casette, alberelli tondi, uccellini, nuvolette, un sole con il viso sorridente se c'è il cielo);
+- palette calda e luminosa (pesca, corallo, rosa, giallo sole, verdi prato, azzurri tenui), \
+colori pieni, al massimo un paio di sfumature delicate;
 - una scena chiara che rappresenti il cuore della storia (es. un bosco per una storia \
-sul bosco, un piccolo aereo nel cielo per un volo), con un cielo o uno sfondo pieno;
-- persone, se servono, solo come sagome stilizzate senza tratti del viso; niente loghi.
+sul bosco, un piccolo aereo nel cielo per un volo);
+- persone e animali in stile naïf: corpi semplici, visi ridotti a puntini e un sorriso; \
+niente loghi.
+
+Composizione:
+- il soggetto principale è GRANDE e CENTRATO, sia in orizzontale sia in verticale, \
+e occupa circa metà della larghezza; intorno lo sfondo si apre in modo simmetrico;
+- il quinto inferiore dell'immagine resta semplice (prato, acqua, terreno), perché lì \
+l'app sovrappone data e categoria.
 
 Regole tecniche obbligatorie:
 - <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {LARGHEZZA} {ALTEZZA}" \
 width="{LARGHEZZA}" height="{ALTEZZA}">;
-- lo sfondo copre tutta l'area; il soggetto principale sta nella metà superiore, perché \
-in basso l'app sovrappone data e categoria;
+- lo sfondo copre tutta l'area;
 - nessun testo, nessun <text>, nessuno <script>, nessuna immagine o link esterni, \
 nessun filtro o animazione;
-- meno di 120 elementi in tutto, codice compatto."""
+- meno di 150 elementi in tutto, codice compatto."""
 
 
 def _svg_sicuro(svg: str) -> bool:

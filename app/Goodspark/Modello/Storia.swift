@@ -11,6 +11,10 @@ struct TestoStoria: Codable, Hashable {
 struct Storia: Codable, Identifiable, Hashable {
     let id: String
     let data: String
+    /// "people", "planet" o "discoveries"; le storie più vecchie non ce l'hanno
+    let area: String?
+    /// true per la storia del giorno, mostrata in grande
+    let principale: Bool?
     let categoria: String
     let emoji: String
     let fonteNome: String
@@ -49,6 +53,35 @@ struct Storia: Codable, Identifiable, Hashable {
     }
 
     var nomeCategoria: String { Storia.nomeCategoria(categoria) }
+
+    var areaEffettiva: String {
+        if let area { return area }
+        switch categoria {
+        case "environment", "animals": return "planet"
+        case "science", "health", "innovation", "culture": return "discoveries"
+        default: return "people"
+        }
+    }
+
+    var èPrincipale: Bool { principale ?? true }
+
+    static let aree = ["people", "planet", "discoveries"]
+
+    static func nomeArea(_ id: String) -> String {
+        switch id {
+        case "planet": String(localized: "Pianeta")
+        case "discoveries": String(localized: "Scoperte")
+        default: String(localized: "Persone")
+        }
+    }
+
+    static func iconaArea(_ id: String) -> String {
+        switch id {
+        case "planet": "leaf.fill"
+        case "discoveries": "lightbulb.fill"
+        default: "person.2.fill"
+        }
+    }
 
     var colori: [Color] { Storia.coloriCategoria[categoria] ?? [.orange, .pink] }
 

@@ -3,15 +3,11 @@ import SwiftUI
 struct ArchivioView: View {
     @Environment(Archivio.self) private var archivio
     @State private var ricerca = ""
-    @State private var categoria: String?
-
-    private var categorie: [String] {
-        Array(Set(archivio.storie.map(\.categoria))).sorted()
-    }
+    @State private var area: String?
 
     private var storieFiltrate: [Storia] {
         archivio.storie.filter { storia in
-            (categoria == nil || storia.categoria == categoria) &&
+            (area == nil || storia.areaEffettiva == area) &&
             (ricerca.isEmpty
                 || storia.titolo.localizedCaseInsensitiveContains(ricerca)
                 || storia.luogo.localizedCaseInsensitiveContains(ricerca)
@@ -22,11 +18,9 @@ struct ArchivioView: View {
     var body: some View {
         NavigationStack {
             List {
-                if categorie.count > 1 {
-                    filtri
-                        .listRowInsets(EdgeInsets())
-                        .listRowBackground(Color.clear)
-                }
+                filtri
+                    .listRowInsets(EdgeInsets())
+                    .listRowBackground(Color.clear)
                 ForEach(storieFiltrate) { storia in
                     NavigationLink(value: storia) { RigaStoria(storia: storia) }
                 }
@@ -46,9 +40,9 @@ struct ArchivioView: View {
     private var filtri: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                Chip(testo: String(localized: "Tutte"), selezionato: categoria == nil) { categoria = nil }
-                ForEach(categorie, id: \.self) { nome in
-                    Chip(testo: Storia.nomeCategoria(nome), selezionato: categoria == nome) { categoria = nome }
+                Chip(testo: String(localized: "Tutte"), selezionato: area == nil) { area = nil }
+                ForEach(Storia.aree, id: \.self) { id in
+                    Chip(testo: Storia.nomeArea(id), icona: Storia.iconaArea(id), selezionato: area == id) { area = id }
                 }
             }
             .padding(.horizontal, 4)
@@ -59,12 +53,17 @@ struct ArchivioView: View {
 
 private struct Chip: View {
     let testo: String
+    var icona: String? = nil
     let selezionato: Bool
     let azione: () -> Void
 
     var body: some View {
         Button(action: azione) {
-            Text(verbatim: testo)
+            Label {
+                Text(verbatim: testo)
+            } icon: {
+                if let icona { Image(systemName: icona) }
+            }
                 .font(.subheadline.weight(.medium))
                 .padding(.horizontal, 14)
                 .padding(.vertical, 7)

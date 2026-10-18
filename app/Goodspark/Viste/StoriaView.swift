@@ -5,12 +5,17 @@ struct StoriaView: View {
     @Environment(Archivio.self) private var archivio
     let storia: Storia
     var etichetta: String? = nil
+    /// Le altre buone notizie del giorno, mostrate in fondo alla storia principale
+    var altre: [Storia] = []
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 copertina
                 testo
+                if !altre.isEmpty {
+                    altreStorie
+                }
             }
         }
         .ignoresSafeArea(edges: .top)
@@ -55,6 +60,19 @@ struct StoriaView: View {
             .padding(20)
         }
         .frame(height: 340)
+    }
+
+    private var altreStorie: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Altre buone notizie di oggi")
+                .font(.system(.title3, design: .serif, weight: .bold))
+            ForEach(altre) { altra in
+                NavigationLink(value: altra) { SchedaStoria(storia: altra) }
+                    .buttonStyle(.plain)
+            }
+        }
+        .padding(.horizontal, 20)
+        .padding(.bottom, 110)
     }
 
     private var testo: some View {
@@ -106,5 +124,40 @@ struct StoriaView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(.quaternary.opacity(0.5), in: RoundedRectangle(cornerRadius: 14))
         .padding(.top, 10)
+    }
+}
+
+/// Una storia secondaria in formato scheda: illustrazione, area e titolo.
+struct SchedaStoria: View {
+    let storia: Storia
+
+    var body: some View {
+        HStack(spacing: 14) {
+            Illustrazione(storia: storia, dimensioneEmoji: 40)
+                .frame(width: 92, height: 92)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+            VStack(alignment: .leading, spacing: 6) {
+                Label(Storia.nomeArea(storia.areaEffettiva), systemImage: Storia.iconaArea(storia.areaEffettiva))
+                    .font(.caption.weight(.bold))
+                    .textCase(.uppercase)
+                    .foregroundStyle(storia.colori.last ?? .accentColor)
+                Text(storia.titolo)
+                    .font(.system(.headline, design: .serif))
+                    .foregroundStyle(.primary)
+                    .lineLimit(3)
+                    .multilineTextAlignment(.leading)
+                Text(storia.luogo)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right")
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(.tertiary)
+        }
+        .padding(12)
+        .background(.quaternary.opacity(0.5), in: RoundedRectangle(cornerRadius: 20))
+        .contentShape(RoundedRectangle(cornerRadius: 20))
     }
 }

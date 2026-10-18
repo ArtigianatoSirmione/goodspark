@@ -5,6 +5,11 @@ on:
   schedule:
     - cron: "0 4 * * *"   # 04:00 UTC = 05:00/06:00 in Italia
   workflow_dispatch:       # permette di lanciarla anche a mano da GitHub
+    inputs:
+      forza:
+        description: "Rigenera le storie di oggi"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -16,7 +21,7 @@ concurrency:
 jobs:
   genera:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -34,7 +39,7 @@ jobs:
       - name: Genera la storia
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python pipeline/genera_storia.py
+        run: python pipeline/genera_storia.py ${{ inputs.forza && '--forza' || '' }}
 
       - name: Pubblica
         run: |

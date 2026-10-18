@@ -7,8 +7,9 @@ struct OggiView: View {
         NavigationStack {
             Group {
                 if let storia = archivio.storiaDiOggi {
-                    StoriaView(storia: storia, etichetta: storia.dataLeggibile)
+                    StoriaView(storia: storia, etichetta: storia.dataLeggibile, altre: archivio.altreDiOggi)
                         .refreshable { await archivio.aggiorna() }
+                        .navigationDestination(for: Storia.self) { StoriaView(storia: $0, etichetta: $0.dataLeggibile) }
                 } else {
                     ContentUnavailableView {
                         Label("Nessuna storia, per ora", systemImage: "sun.horizon")

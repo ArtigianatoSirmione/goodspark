@@ -25,7 +25,14 @@ final class Archivio {
         storie = caricaDaCache() ?? caricaEsempi()
     }
 
-    var storiaDiOggi: Storia? { storie.first }
+    /// La storia del giorno: la più recente segnata come principale.
+    var storiaDiOggi: Storia? { storie.first(where: \.èPrincipale) ?? storie.first }
+
+    /// Le altre storie dello stesso giorno della storia principale.
+    var altreDiOggi: [Storia] {
+        guard let principale = storiaDiOggi else { return [] }
+        return storie.filter { $0.data == principale.data && $0.id != principale.id }
+    }
 
     var storiePreferite: [Storia] { storie.filter { preferiti.contains($0.id) } }
 

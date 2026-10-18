@@ -18,6 +18,22 @@
         }
       }
     },
+    "Altre buone notizie di oggi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "More good news today"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altre buone notizie di oggi"
+          }
+        }
+      }
+    },
     "Ambiente": {
       "localizations": {
         "en": {
@@ -386,6 +402,38 @@
         }
       }
     },
+    "Persone": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "People"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Persone"
+          }
+        }
+      }
+    },
+    "Pianeta": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Planet"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pianeta"
+          }
+        }
+      }
+    },
     "Preferiti": {
       "localizations": {
         "en": {
@@ -478,6 +526,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "Scoperta su Goodspark"
+          }
+        }
+      }
+    },
+    "Scoperte": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Discoveries"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scoperte"
           }
         }
       }
