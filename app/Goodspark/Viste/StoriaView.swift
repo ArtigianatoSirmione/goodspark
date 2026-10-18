@@ -9,16 +9,19 @@ struct StoriaView: View {
     var altre: [Storia] = []
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
-                copertina
-                testo
-                if !altre.isEmpty {
-                    altreStorie
+        GeometryReader { schermo in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    // L'illustrazione inizia sotto orologio e pulsanti, così si vede tutta
+                    copertina(spazioSopra: schermo.safeAreaInsets.top, larghezza: schermo.size.width)
+                    testo
+                    if !altre.isEmpty {
+                        altreStorie
+                    }
                 }
             }
+            .ignoresSafeArea(edges: .top)
         }
-        .ignoresSafeArea(edges: .top)
         .toolbar {
             ToolbarItemGroup {
                 Button {
@@ -37,12 +40,11 @@ struct StoriaView: View {
         }
     }
 
-    private var copertina: some View {
+    private func copertina(spazioSopra: CGFloat, larghezza: CGFloat) -> some View {
         ZStack(alignment: .bottomLeading) {
-            Illustrazione(storia: storia)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            Illustrazione(storia: storia, spazioSopra: spazioSopra)
             // Leggera ombra in basso perché data e categoria restino leggibili sull'illustrazione
-            LinearGradient(colors: [.clear, .black.opacity(0.35)], startPoint: .center, endPoint: .bottom)
+            LinearGradient(colors: [.clear, .black.opacity(0.35)], startPoint: UnitPoint(x: 0.5, y: 0.65), endPoint: .bottom)
             VStack(alignment: .leading, spacing: 6) {
                 if let etichetta {
                     Text(etichetta.uppercased())
@@ -59,8 +61,7 @@ struct StoriaView: View {
             }
             .padding(20)
         }
-        // Alta abbastanza perché il centro dell'illustrazione resti ben sotto la Dynamic Island
-        .frame(height: 440)
+        .frame(width: larghezza, height: spazioSopra + larghezza / Illustrazione.proporzione)
     }
 
     private var altreStorie: some View {
