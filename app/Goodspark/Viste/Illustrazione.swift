@@ -7,22 +7,24 @@ struct Illustrazione: View {
     var dimensioneEmoji: CGFloat = 120
 
     var body: some View {
-        ZStack {
-            LinearGradient(colors: storia.colori, startPoint: .topLeading, endPoint: .bottomTrailing)
-            if let url = storia.urlImmagine {
-                AsyncImage(url: url, transaction: Transaction(animation: .easeOut(duration: 0.3))) { fase in
-                    if let immagine = fase.image {
-                        immagine.resizable().scaledToFill()
-                    } else {
-                        emoji
+        // La sfumatura decide le dimensioni; l'immagine sta in overlay così,
+        // anche riempiendo lo spazio, non allarga la pagina.
+        LinearGradient(colors: storia.colori, startPoint: .topLeading, endPoint: .bottomTrailing)
+            .overlay {
+                if let url = storia.urlImmagine {
+                    AsyncImage(url: url, transaction: Transaction(animation: .easeOut(duration: 0.3))) { fase in
+                        if let immagine = fase.image {
+                            immagine.resizable().scaledToFill()
+                        } else {
+                            emoji
+                        }
                     }
+                } else {
+                    emoji
                 }
-            } else {
-                emoji
             }
-        }
-        .clipped()
-        .accessibilityHidden(true)
+            .clipped()
+            .accessibilityHidden(true)
     }
 
     private var emoji: some View {
