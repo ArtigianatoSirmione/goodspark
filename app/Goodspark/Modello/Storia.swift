@@ -16,6 +16,8 @@ struct Storia: Codable, Identifiable, Hashable {
     let fonteNome: String
     let fonteUrl: String
     let minutiLettura: Int
+    /// Percorso dell'illustrazione rispetto a storie.json (es. "immagini/2026-10-18.png")
+    let immagine: String?
     let it: TestoStoria
     let en: TestoStoria
 
@@ -36,6 +38,11 @@ struct Storia: Codable, Identifiable, Hashable {
     }
 
     var urlFonte: URL? { URL(string: fonteUrl) }
+
+    var urlImmagine: URL? {
+        guard let immagine, !immagine.isEmpty else { return nil }
+        return URL(string: immagine, relativeTo: Configurazione.urlStorie)?.absoluteURL
+    }
 
     var testoDaCondividere: String {
         "\(emoji) \(titolo)\n\n\(sottotitolo)\n\n\(String(localized: "Scoperta su Goodspark"))"

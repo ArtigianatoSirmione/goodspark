@@ -34,12 +34,10 @@ struct StoriaView: View {
 
     private var copertina: some View {
         ZStack(alignment: .bottomLeading) {
-            LinearGradient(colors: storia.colori, startPoint: .topLeading, endPoint: .bottomTrailing)
-            Text(storia.emoji)
-                .font(.system(size: 120))
+            Illustrazione(storia: storia)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.bottom, 40)
-                .accessibilityHidden(true)
+            // Leggera ombra in basso perché data e categoria restino leggibili sull'illustrazione
+            LinearGradient(colors: [.clear, .black.opacity(0.35)], startPoint: .center, endPoint: .bottom)
             VStack(alignment: .leading, spacing: 6) {
                 if let etichetta {
                     Text(etichetta.uppercased())

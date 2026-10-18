@@ -80,13 +80,9 @@ struct RigaStoria: View {
 
     var body: some View {
         HStack(spacing: 14) {
-            Text(storia.emoji)
-                .font(.title)
+            Illustrazione(storia: storia, dimensioneEmoji: 28)
                 .frame(width: 56, height: 56)
-                .background(
-                    LinearGradient(colors: storia.colori, startPoint: .topLeading, endPoint: .bottomTrailing),
-                    in: RoundedRectangle(cornerRadius: 14)
-                )
+                .clipShape(RoundedRectangle(cornerRadius: 14))
             VStack(alignment: .leading, spacing: 4) {
                 Text(storia.titolo)
                     .font(.headline)

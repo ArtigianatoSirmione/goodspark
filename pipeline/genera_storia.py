@@ -24,9 +24,11 @@ import anthropic
 import feedparser
 
 from fonti import FONTI
+from illustrazione import crea_illustrazione
 
 RADICE = Path(__file__).resolve().parent.parent
 FILE_STORIE = RADICE / "docs" / "storie.json"
+CARTELLA_IMMAGINI = RADICE / "docs" / "immagini"
 MAX_STORIE_ARCHIVIO = 500
 ORE_RECENTI = 72
 MAX_CANDIDATE_PER_FONTE = 15
@@ -256,7 +258,11 @@ def main() -> int:
     oggi = adesso_italia().date().isoformat()
     archivio = carica_archivio()
     if not args.forza and archivio and archivio[0]["data"] == oggi:
-        print(f"La storia del {oggi} esiste già, niente da fare.")
+        if not archivio[0].get("immagine") and not args.prova:
+            print(f"La storia del {oggi} esiste già: aggiungo l'illustrazione mancante...")
+            aggiungi_illustrazione(archivio)
+        else:
+            print(f"La storia del {oggi} esiste già, niente da fare.")
         return 0
 
     print("Raccolgo le notizie...")
@@ -297,7 +303,18 @@ def main() -> int:
     salva_archivio(archivio)
     print(f"Pubblicata: {storia['emoji']} {storia['it']['titolo']} / {storia['en']['titolo']}")
     print(f"Motivo: {risultato['motivo_scelta']}")
+    print("Disegno l'illustrazione...")
+    aggiungi_illustrazione(archivio)
     return 0
+
+
+def aggiungi_illustrazione(archivio: list) -> None:
+    storia = archivio[0]
+    immagine = crea_illustrazione(storia, CARTELLA_IMMAGINI)
+    if immagine:
+        storia["immagine"] = immagine
+        salva_archivio(archivio)
+        print(f"Illustrazione salvata: {immagine}")
 
 
 if __name__ == "__main__":

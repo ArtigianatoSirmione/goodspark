@@ -28,6 +28,9 @@ jobs:
 
       - run: pip install -r pipeline/requirements.txt
 
+      - name: Installa il convertitore per le illustrazioni
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
+
       - name: Genera la storia
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -35,12 +38,12 @@ jobs:
 
       - name: Pubblica
         run: |
-          if git diff --quiet docs/storie.json; then
+          git add docs/
+          if git diff --cached --quiet; then
             echo "Nessuna nuova storia oggi."
             exit 0
           fi
           git config user.name "storia-del-giorno[bot]"
           git config user.email "storia-del-giorno@users.noreply.github.com"
-          git add docs/storie.json
           git commit -m "Storia del $(TZ=Europe/Rome date +%F)"
           git push
