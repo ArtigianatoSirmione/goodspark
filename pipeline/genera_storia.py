@@ -33,11 +33,14 @@ RADICE = Path(__file__).resolve().parent.parent
 FILE_STORIE = RADICE / "docs" / "storie.json"
 CARTELLA_IMMAGINI = RADICE / "docs" / "immagini"
 MAX_STORIE_ARCHIVIO = 1000
-ORE_RECENTI = 72
+# Una bella storia resta bella per qualche giorno; i doppioni sono esclusi dal link
+ORE_RECENTI = 24 * 7
 MAX_CANDIDATE_PER_FONTE = 15
 PUNTEGGIO_MINIMO = 7
-# Goodspark pubblica solo storie davvero speciali: questa è l'asticella più importante
-BELLEZZA_MINIMA = 8
+# Goodspark pubblica solo storie davvero speciali: questa è l'asticella più importante.
+# La storia del giorno deve essere eccezionale, le altre due belle.
+BELLEZZA_MINIMA = 7
+BELLEZZA_MINIMA_PRINCIPALE = 8
 
 # Le tre aree dell'app e le categorie che contengono.
 # Gli identificativi restano in inglese: l'app li mostra tradotti nella lingua del telefono.
@@ -147,8 +150,9 @@ La categoria deve appartenere all'area della storia.
 punteggio_positivita va da 1 a 10: quanto la storia è vera, positiva e adatta a tutti. \
 punteggio_bellezza va da 1 a 10: quanto è emozionante, evocativa e memorabile (10 = una \
 storia che commuove e si racconta agli amici; 5 = una notizia corretta ma che si dimentica). \
-Sii molto severo: non proporre storie con positività sotto 7 o bellezza sotto 8. È normale \
-e giusto che in certi giorni un'area resti vuota."""
+Sii severo: non proporre storie con positività sotto 7 o bellezza sotto 7, e scegli come \
+storia del giorno solo una storia con bellezza almeno 8. Se per un'area non c'è niente di \
+almeno 7, lasciala vuota."""
 
 
 def adesso_italia() -> datetime:
@@ -171,6 +175,7 @@ def salva_archivio(storie: list) -> None:
 
 
 def raccogli_candidate(link_gia_usati: set) -> list:
+    link_gia_usati = set(link_gia_usati)  # copia: ci aggiungiamo anche i link visti qui
     limite = datetime.now(timezone.utc) - timedelta(hours=ORE_RECENTI)
     candidate = []
     for fonte in FONTI:
@@ -196,6 +201,7 @@ def raccogli_candidate(link_gia_usati: set) -> list:
                 "estratto": estratto,
                 "link": link,
             })
+            link_gia_usati.add(link)  # alcune fonti compaiono in più feed
             voci += 1
             if voci >= MAX_CANDIDATE_PER_FONTE:
                 break
@@ -296,7 +302,7 @@ def pulisci_testo(testo: dict) -> dict:
 
 def storie_valide(risultato: dict, candidate: list, oggi: str) -> list:
     """Le storie che superano i controlli, con la storia del giorno per prima."""
-    valide, indici_usati, aree_usate = [], set(), set()
+    valide, indici_usati, aree_usate, bellezze = [], set(), set(), {}
     for proposta in risultato["storie"]:
         if proposta["area"] in aree_usate:
             continue
@@ -309,6 +315,7 @@ def storie_valide(risultato: dict, candidate: list, oggi: str) -> list:
         scelta = candidate[proposta["indice_candidata"]]
         testi = {lingua: pulisci_testo(proposta[lingua]) for lingua in LINGUE}
         parole = sum(len(p.split()) for p in testi["it"]["paragrafi"])
+        bellezze[f"{oggi}-{proposta['area']}"] = proposta["punteggio_bellezza"]
         valide.append({
             "id": f"{oggi}-{proposta['area']}",
             "data": oggi,
@@ -322,9 +329,12 @@ def storie_valide(risultato: dict, candidate: list, oggi: str) -> list:
             **testi,
         })
     if valide:
-        # La storia del giorno è quella scelta da Claude, se è stata accettata
-        principale = next((s for s in valide if s["area"] == risultato["area_principale"]), valide[0])
-        principale["principale"] = True
+        # La storia del giorno è quella scelta da Claude, se è abbastanza bella;
+        # altrimenti la più bella tra quelle accettate
+        scelta = next((s for s in valide if s["area"] == risultato["area_principale"]), None)
+        if not scelta or bellezze[scelta["id"]] < BELLEZZA_MINIMA_PRINCIPALE:
+            scelta = max(valide, key=lambda s: bellezze[s["id"]])
+        scelta["principale"] = True
         valide.sort(key=lambda s: not s["principale"])
     return valide
 

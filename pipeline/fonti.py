@@ -11,9 +11,16 @@ FONTI = [
     {"nome": "ANSA", "url": "https://www.ansa.it/sito/ansait_rss.xml"},
     {"nome": "ANSA Scienza", "url": "https://www.ansa.it/canale_scienza_tecnica/notizie/scienzaetecnica_rss.xml"},
     {"nome": "ANSA Ambiente", "url": "https://www.ansa.it/canale_ambiente/notizie/ambiente_rss.xml"},
+    {"nome": "LifeGate", "url": "https://www.lifegate.it/feed"},
+    {"nome": "WWF Italia", "url": "https://www.wwf.it/feed/"},
     # Internazionali dedicate alle buone notizie
     {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/"},
     {"nome": "Positive News", "url": "https://www.positive.news/feed/"},
     {"nome": "Reasons to be Cheerful", "url": "https://reasonstobecheerful.world/feed/"},
     {"nome": "The Optimist Daily", "url": "https://www.optimistdaily.com/feed/"},
+    {"nome": "Good Good Good", "url": "https://www.goodgoodgood.co/articles/rss.xml"},
+    # Natura e animali
+    {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/category/news/animals/feed/"},
+    {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/category/news/earth/feed/"},
+    {"nome": "Mongabay", "url": "https://news.mongabay.com/feed/"},
 ]
