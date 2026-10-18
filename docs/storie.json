@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-18T21:06:33+00:00",
+  "aggiornato": "2026-10-18T21:16:42+00:00",
   "storie": [
     {
       "id": "2026-10-18-people",
@@ -13,29 +13,61 @@
       "minuti_lettura": 1,
       "it": {
         "titolo": "A 99 anni, in piedi sulle ali di un aereo",
-        "sottotitolo": "Helga Duffy, ex infermiera inglese, è diventata la persona più anziana al mondo a volare in piedi sull'ala di un aereo.",
+        "sottotitolo": "Helga Duffy, ex infermiera, è diventata la donna più anziana al mondo a volare sulle ali di un aereo, con un ginocchio malandato e tanta voglia di provarci.",
         "paragrafi": [
-          "È legata in piedi sull'ala di un piccolo biplano. Sotto di lei scorre la campagna del Gloucestershire. A mille metri d'altezza fa tre respiri profondi, come per assaggiare l'aria. Si chiama Helga Duffy, ha 99 anni e ha passato gran parte della vita a fare l'infermiera.",
-          "Tutto è nato quasi per caso. Sua nipote Jackie Rose aveva letto che Betty Bromage, a 97 anni, aveva conquistato il record mondiale di wing-walking, cioè il volo in piedi sull'ala di un aereo. Ha pensato che anche la zia potesse farcela. Anche il personale della residenza per anziani in cui vive Helga l'ha spinta a provarci. Lei non sapeva nemmeno cosa fosse, ma quando l'ha scoperto ha deciso subito di tentare.",
-          "Salire sull'aereo non è stato facile, perché Helga soffre di artrite e ha un ginocchio malandato. Eppure è rimasta in volo per più di cinque minuti. Quando ha toccato terra, un giudice del Guinness dei Primati le ha consegnato il certificato, tra gli applausi di tutti. Con l'impresa ha anche raccolto oltre 1.600 sterline per l'eliambulanza della sua zona.",
-          "Ora quel certificato è appeso nella sua residenza, come promemoria per tutti. E Betty, la sua rivale, le ha fatto i complimenti, scherzando che non vede l'ora di compiere cent'anni per riprendersi il primato.",
-          "Il motto di Helga è semplice: non dire mai che non ce la fai, prima di averci provato."
+          "Un piccolo aereo si alza sopra le campagne del Gloucestershire, in Inghilterra. Sopra le ali, legata a un sostegno, c'è una signora di 99 anni. Si chiama Helga Duffy e per buona parte della vita ha lavorato come infermiera.",
+          "Tutto è partito dalla nipote Jackie Rose. Quest'anno aveva letto di Betty Bromage, che a 97 anni era diventata la donna più anziana al mondo a volare in piedi sulle ali di un aereo. Ha pensato che anche la zia potesse farcela. Pure il personale della residenza per anziani dove vive Helga l'ha incoraggiata. Lei non sapeva nemmeno cosa fosse il wing-walking, ma quando l'ha scoperto ha voluto provarci. Sentiva che poteva essere una delle ultime occasioni per fare qualcosa di nuovo.",
+          "L'artrite e il ginocchio destro le rendevano difficile perfino salire a bordo. Eppure all'aeroporto di Rendcomb è rimasta in volo per più di cinque minuti. Lassù, a mille metri, ha fatto tre respiri profondi e si è goduta un'aria limpidissima. Quando è atterrata, la accoglievano gli applausi e un giudice del Guinness con il certificato del record.",
+          "Con la sua impresa ha raccolto oltre 1.600 sterline per l'eliambulanza della sua zona. Ora il certificato è appeso nella residenza. Il suo motto è semplice: non dire mai che non puoi, finché non hai provato. Betty le ha fatto i complimenti e ha scherzato che non vede l'ora di compiere 100 anni per riprendersi il primato."
         ],
-        "luogo": "Rendcomb, Gloucestershire, Inghilterra"
+        "luogo": "Rendcomb, Gloucestershire (Inghilterra)"
       },
       "en": {
         "titolo": "At 99, she stood on the wing of a plane",
-        "sottotitolo": "Helga Duffy, a retired English nurse, is now the oldest person in the world to ride standing on the wing of a plane in flight.",
+        "sottotitolo": "Former nurse Helga Duffy flew into the record books as the world's oldest female wing-walker, bad knee and all.",
         "paragrafi": [
-          "She is strapped upright on the wing of a small plane while the Gloucestershire countryside rolls by below. A thousand meters up, she takes three deep breaths, as if tasting the air. Her name is Helga Duffy. She is 99 and spent most of her working life as a nurse.",
-          "It started almost by accident. Her niece, Jackie Rose, read that a 97-year-old named Betty Bromage had set the world record for wing-walking, and she thought her aunt could do it too. The staff at Helga's assisted-living home encouraged her as well. Helga had never even heard of wing-walking, but once she found out what it was, she wanted to try it.",
-          "Getting onto the plane was hard, because she has arthritis and a bad right knee. Even so, she stayed in the air for more than five minutes. When she landed, a Guinness World Records adjudicator gave her an official certificate while everyone clapped. The flight also raised more than £1,600 for her regional air ambulance charity.",
-          "The certificate now hangs in her care home for everyone to see. Betty, the woman whose record she broke, sent her congratulations and joked that she can't wait to turn 100 so she can win the title back.",
-          "Helga's motto is simple: never say you can't do something until you've tried it."
+          "A small plane climbs over the Gloucestershire countryside, and strapped on top of its wing is a 99-year-old woman. Her name is Helga Duffy, and she spent most of her working life as a nurse.",
+          "It started with her niece, Jackie Rose. Earlier this year Jackie read about Betty Bromage, who had become the world's oldest female wing-walker at 97, and decided her aunt could do it too. The staff at Helga's assisted-living home urged her on as well. Helga had never heard of wing-walking. Once she found out what it was, she was set on trying it, because she felt it might be one of her last chances to do something new.",
+          "Arthritis and a bad right knee made it hard just to board the plane. Even so, she stayed up for more than five minutes over Rendcomb Airfield. About a thousand metres up, she took three deep breaths of what she called incredibly pure air. When she landed, people were clapping, and a Guinness World Records adjudicator was waiting with her certificate.",
+          "Her flight also raised more than £1,600 for the regional Air Ambulance charity. The certificate now hangs in her care home. Her motto is simple: never say you can't do something until you've tried it. Betty sent her congratulations, joking that she can't wait to turn 100 and take the record back."
         ],
         "luogo": "Rendcomb, Gloucestershire, England"
       },
       "immagine": "immagini/2026-10-18-people.png"
+    },
+    {
+      "id": "2026-10-18-planet",
+      "data": "2026-10-18",
+      "area": "planet",
+      "principale": false,
+      "categoria": "animals",
+      "emoji": "🕊️",
+      "fonte_nome": "WWF Italia",
+      "fonte_url": "https://www.wwf.it/pandanews/animali/libera-la-cicogna-salvata-dal-wwf/",
+      "minuti_lettura": 1,
+      "it": {
+        "titolo": "La giovane cicogna polacca che si era fermata in Costiera",
+        "sottotitolo": "Era stremata durante la sua prima migrazione. I volontari del WWF l'hanno soccorsa e, dopo le cure, è tornata a volare verso sud.",
+        "paragrafi": [
+          "Per qualche giorno, sulla terrazza di un albergo affacciato sul mare a Marina del Cantone, c'era un ospite insolito: una cicogna bianca. Non sembrava ferita, ma non ripartiva. Aveva un anello alla zampa.",
+          "Quando lo hanno saputo, i volontari del WWF Terre del Tirreno sono andati subito sul posto, con il presidente Claudio d'Esposito e il biologo Fabio Russo. L'uccello era così debole che si è lasciato prendere senza opporre resistenza. Il becco non era ancora rosso acceso e aveva la punta scura: era un esemplare giovane.",
+          "Gli anelli hanno raccontato la sua storia. Era stata inanellata in Polonia il 16 giugno, ancora pulcino, e quella era la sua prima migrazione. Un'ambulanza l'ha portata al centro di recupero della fauna selvatica Frullone di Napoli. Lì i veterinari hanno trovato un forte indebolimento dovuto a problemi metabolici. Dopo le cure, la cicogna è passata nelle voliere di riabilitazione fino a quando non si è ripresa del tutto.",
+          "Ora è libera. L'hanno liberata in una zona adatta dell'Avellinese, dove potrà nutrirsi e ripartire verso sud con l'arrivo dell'inverno. Per le giovani cicogne i primi due anni e i lunghi viaggi verso l'Africa sono i più pericolosi. Questa volta, però, c'era qualcuno ad aiutarla."
+        ],
+        "luogo": "Massa Lubrense (Napoli), Italia"
+      },
+      "en": {
+        "titolo": "The young Polish stork that landed on the Amalfi Coast",
+        "sottotitolo": "Worn out on its first migration, a white stork was rescued by WWF volunteers near Naples and is now free to fly south again.",
+        "paragrafi": [
+          "For a few days, a hotel terrace overlooking the sea at Marina del Cantone had an unusual guest: a white stork. It didn't look injured, but it wasn't leaving either. There was a ring on its leg.",
+          "Volunteers from WWF Terre del Tirreno went straight there, including the group's president, Claudio d'Esposito, and biologist Fabio Russo. The bird was so weak that it let them pick it up without a struggle. Its beak wasn't bright red yet and still had a dark tip, which meant it was young.",
+          "The rings told its story. The stork had been ringed in Poland on 16 June as a chick, and this was its very first migration. An ambulance took it to the Frullone wildlife rescue centre in Naples, where vets found it badly weakened by metabolic problems. After treatment, it moved into rehabilitation aviaries until it had fully recovered.",
+          "Now it is free. It was released at a suitable spot in the province of Avellino, where it can feed in the wild and head south again when winter arrives. A stork's first two years are its most dangerous, especially the long journeys to Africa. This time, someone was there to help."
+        ],
+        "luogo": "Massa Lubrense, near Naples, Italy"
+      },
+      "immagine": "immagini/2026-10-18-planet.png"
     },
     {
       "id": "2026-10-18-discoveries",
@@ -43,33 +75,31 @@
       "area": "discoveries",
       "principale": false,
       "categoria": "science",
-      "emoji": "🪸",
-      "fonte_nome": "Good News Network",
-      "fonte_url": "https://www.goodnewsnetwork.org/coral-bleaching-reversed-at-record-speed-using-new-stanford-method/",
+      "emoji": "🐙",
+      "fonte_nome": "The Optimist Daily",
+      "fonte_url": "https://www.optimistdaily.com/2026/10/scientists-discovered-the-worlds-largest-octopus-nursery-off-the-california-coast/",
       "minuti_lettura": 1,
       "it": {
-        "titolo": "I coralli che tornano a vivere con un tocco",
-        "sottotitolo": "A Stanford, coralli sbiancati e vicini alla morte hanno ritrovato i colori in sette settimane, solo toccando dei cloni sani.",
+        "titolo": "Il giardino segreto dei 20.000 polpi",
+        "sottotitolo": "Nelle profondità al largo della California, delle sorgenti calde ospitano il più grande raduno di polpi d'altura che si conosca.",
         "paragrafi": [
-          "Tutto è cominciato con un piccolo incidente in laboratorio. Nel 2025, in una vasca dell'Università di Stanford, si sono rovesciati due frammenti dello stesso corallo, uno sano e uno sbiancato, e sono finiti a contatto. Il professor Steve Palumbi ha notato che proprio nel punto in cui si toccavano il frammento pallido stava riprendendo colore.",
-          "Quando l'acqua del mare si scalda, i coralli espellono le alghe che vivono nei loro tessuti e li nutrono. Così diventano bianchi, deboli e affamati. Danny Collins, dottorando a Stanford, ha voluto capire meglio quello che era successo nella vasca. Ha messo alcune coppie di coralli in modo che si toccassero, mentre ha lasciato pochi millimetri tra quelli delle altre coppie.",
-          "I frammenti sbiancati che toccavano un clone sano sono guariti completamente in sette settimane, la ripresa più veloce mai documentata. Quelli rimasti separati sono morti. I tessuti di coralli geneticamente identici si fondono, e attraverso minuscoli canali le alghe passano dal corallo sano a quello malato. Lì si moltiplicano a una velocità circa dieci volte superiore a quella dei coralli in natura. A volte sono bastati cinque giorni di contatto.",
-          "Lo studio è stato pubblicato su Science Advances. Ora i ricercatori cercano altri modi per portare le alghe ai coralli malati senza bisogno di un contatto continuo.",
-          "Un corallo sbiancato non è ancora morto, e può essere salvato."
+          "Laggiù, sul fondale freddo e buio dell'oceano, migliaia di piccoli polpi viola chiaro, grandi più o meno come un pompelmo, stanno raccolti in uno spazio di pochi ettari. Si costruiscono le tane con sassi, conchiglie e qualunque oggetto umano sia finito sul fondo.",
+          "Siamo nel santuario marino nazionale della baia di Monterey, oltre 15.000 chilometri quadrati di oceano lungo la costa centrale della California, tra le acque profonde più studiate al mondo. Eppure fino al 2018 nessuno si era accorto che lì vivevano più di 20.000 polpi. Li hanno trovati i ricercatori del Monterey Bay Aquarium Research Institute. Con strumenti di mappatura subacquea ne hanno contati circa 6.000 in due ettari e mezzo, poi hanno stimato il resto. È il più grande raduno di polpi di profondità conosciuto sulla Terra.",
+          "Il segreto sono le sorgenti idrotermali, che scaldano l'acqua. Il calore accelera il metabolismo dei polpi e lo sviluppo delle uova. Di solito, negli abissi, le femmine covano per anni. Qui ci mettono circa un anno e otto mesi.",
+          "Questo giardino è sopravvissuto anche perché si trova in un'area protetta, dove le trivellazioni e le miniere sottomarine sono limitate. Ci lascia una domanda bellissima: quanti altri giardini come questo ci sono, nascosti in fondali che nessuno ha ancora esplorato?"
         ],
-        "luogo": "Stanford, California, Stati Uniti"
+        "luogo": "Baia di Monterey, California (Stati Uniti)"
       },
       "en": {
-        "titolo": "Bleached corals brought back to life by touch",
-        "sottotitolo": "At Stanford, bleached corals close to death got their color back in seven weeks just by touching healthy clones.",
+        "titolo": "The hidden garden of 20,000 octopuses",
+        "sottotitolo": "Deep off the California coast, warm springs host the largest known gathering of deep-sea octopuses on Earth.",
         "paragrafi": [
-          "It began with a small accident in the lab. In 2025, two pieces of the same coral, one healthy and one bleached, tipped over in a tank at Stanford University and ended up touching. Professor Steve Palumbi noticed that the pale fragment was getting its color back right where the two met.",
-          "When the ocean gets too warm, corals push out the algae that live in their tissue and feed them. That leaves them white, weak and starving. Danny Collins, a PhD student at Stanford, set out to understand what had happened in that tank. He placed some pairs of corals so they were touching and left a gap of just a few millimeters between the others.",
-          "The bleached pieces that touched a healthy clone recovered completely in seven weeks, the fastest recovery on record. The ones that never touched died. Genetically identical corals fuse their tissue, and tiny channels let the algae flow from the healthy coral into the sick one. Once inside, the algae multiplied about ten times faster than in wild corals. Sometimes five days of contact was enough.",
-          "The study was published in Science Advances. The researchers are now looking for ways to deliver the algae to bleached corals without the need for constant contact.",
-          "A bleached coral is not dead yet, and it can still be saved."
+          "Down on the cold, dark ocean floor, thousands of pale purple octopuses, each about the size of a grapefruit, crowd into just a few acres. They build their dens from stones, shells and whatever human objects have drifted down to the bottom.",
+          "This is the Monterey Bay National Marine Sanctuary, more than 6,000 square miles of ocean along California's central coast and one of the most closely studied deep-sea areas in the world. Even so, nobody knew until 2018 that more than 20,000 octopuses lived there. Researchers from the Monterey Bay Aquarium Research Institute found them. Using underwater mapping, they counted about 6,000 in two and a half hectares and estimated the rest. It is the largest known deep-sea octopus gathering on the planet.",
+          "The secret is a field of hydrothermal springs that warms the water. The heat speeds up the octopuses' metabolism and helps their eggs develop faster. In the deep sea, females usually brood their eggs for years. Here it takes about 1.8 years.",
+          "The garden has survived partly because it sits in a protected area, where oil and gas exploration and seabed mining are restricted. It leaves us with a lovely question: how many more gardens like this are waiting in parts of the seafloor that no one has mapped yet?"
         ],
-        "luogo": "Stanford, California, USA"
+        "luogo": "Monterey Bay, California, USA"
       },
       "immagine": "immagini/2026-10-18-discoveries.png"
     }
