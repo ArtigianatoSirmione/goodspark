@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 xcuserdata/
 DerivedData/
+
+# Dati di firma personali, solo su questo Mac
+*.local.xcconfig
