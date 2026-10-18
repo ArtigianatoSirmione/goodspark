@@ -1,37 +1,106 @@
 {
-  "aggiornato": "2026-10-18T20:18:38+00:00",
+  "aggiornato": "2026-10-18T20:31:47+00:00",
   "storie": [
     {
-      "id": "2026-10-18",
+      "id": "2026-10-18-people",
       "data": "2026-10-18",
+      "area": "people",
+      "principale": true,
       "categoria": "sport",
       "emoji": "✈️",
       "fonte_nome": "Good News Network",
       "fonte_url": "https://www.goodnewsnetwork.org/99-yo-woman-snags-worlds-oldest-wing-walker-title/",
       "minuti_lettura": 1,
       "it": {
-        "titolo": "A 99 anni in piedi sull'ala di un aereo: Helga entra nel Guinness",
-        "sottotitolo": "Ha passato la vita a fare l'infermiera e ora è la donna più anziana al mondo ad aver provato il wing-walking, raccogliendo fondi per l'eliambulanza.",
+        "titolo": "A 99 anni in piedi sulle ali di un aereo: Helga entra nei Guinness",
+        "sottotitolo": "Un'ex infermiera inglese è diventata la persona più anziana al mondo a fare wing-walking, e ha raccolto fondi per l'eliambulanza.",
         "paragrafi": [
-          "Fino a pochi mesi fa Helga Duffy, 99 anni, non sapeva nemmeno cosa fosse il wing-walking, l'acrobazia in cui si vola legati in piedi sopra l'ala di un piccolo aereo. Oggi il Guinness dei primati la riconosce come la donna più anziana al mondo ad averlo fatto.",
-          "Tutto è nato da un'idea della nipote, Jackie Rose. Aveva letto di Betty Bromage, che a 97 anni aveva conquistato lo stesso titolo, e ha pensato che anche la zia potesse farcela. Anche il personale della residenza per anziani dove vive Helga l'ha spinta a provarci. Lei ha accettato: per lei era l'ultima occasione per fare qualcosa di diverso.",
-          "Non era affatto scontato. Helga soffre di artrite e ha un ginocchio destro malandato, e già l'idea di salire sull'aereo la preoccupava. Eppure all'aerodromo di Rendcomb, nel Gloucestershire, ben assicurata e con un abbigliamento apposito, è rimasta in volo per più di cinque minuti, sentendosi al sicuro e di ottimo umore. Appena atterrata, tra gli applausi, un giudice del Guinness, Will Munford, le ha consegnato il certificato ufficiale.",
-          "Con la sua impresa ha raccolto anche più di 1.600 sterline per l'ente benefico che gestisce l'eliambulanza della sua regione. Il certificato ora è esposto nella residenza, e il suo motto è semplice: mai dire che non ce la fai prima di averci provato. Betty, la primatista precedente, le ha fatto i complimenti, scherzando che non vede l'ora di compiere 100 anni per riprendersi il record."
+          "Fino a poco tempo fa Helga Duffy non sapeva nemmeno cosa fosse il wing-walking, cioè volare legati in piedi sopra le ali di un piccolo aereo. Poi sua nipote Jackie Rose ha letto la notizia di Betty Bromage, che a 97 anni aveva conquistato il record mondiale. Ha pensato che anche la zia potesse farcela, e il personale della struttura per anziani dove vive Helga l'ha incoraggiata a provarci.",
+          "Tre mesi dopo, all'aeroporto di Rendcomb, nel Gloucestershire, Helga si è fatta assicurare sul dorso dell'aereo ed è rimasta in volo per più di cinque minuti. Non è stato facile: l'artrite e un ginocchio destro malandato le rendevano faticoso perfino salire a bordo. Lassù, però, si è sentita al sicuro e piena di energia, con un'aria pulitissima da respirare.",
+          "Appena atterrata, un giudice del Guinness World Records, Will Munford, le ha consegnato il certificato ufficiale. Oggi quel foglio è appeso nella sua casa di riposo, per ricordare a tutti che l'età conta poco. Con la sua impresa, Helga, che ha lavorato come infermiera per gran parte della vita, ha anche raccolto oltre 1.600 sterline per l'eliambulanza della sua regione.",
+          "Il suo motto è semplice: mai dire di non essere capaci prima di aver provato. E Betty, la detentrice del record precedente, si è congratulata con lei, scherzando sul fatto di non vedere l'ora di compiere 100 anni per riprenderselo."
         ],
-        "luogo": "Rendcomb, Gloucestershire (Inghilterra)"
+        "luogo": "Rendcomb, Gloucestershire, Inghilterra"
       },
       "en": {
-        "titolo": "At 99, Helga stood on a plane's wing and set a world record",
-        "sottotitolo": "After a lifetime working as a nurse, she has become the world's oldest female wing-walker, raising money for an air ambulance charity along the way.",
+        "titolo": "At 99, Helga stands on a plane's wing and into the record books",
+        "sottotitolo": "A retired nurse in England has become the world's oldest wing-walker, raising money for the air ambulance along the way.",
         "paragrafi": [
-          "A few months ago, Helga Duffy had never even heard of wing-walking, the stunt where you fly strapped upright on top of a small plane. Now, at 99, Guinness World Records has named her the oldest woman in the world to have done it.",
-          "The idea came from her niece, Jackie Rose. She had seen news reports about Betty Bromage, who took the same title at 97, and decided her aunt could do it too. Staff at Helga's assisted-living home also encouraged her to give it a go. Helga saw it as her last chance to do something different, and she said yes.",
-          "It wasn't easy. Helga has arthritis and a bad right knee, and just getting into the plane worried her. Still, at Rendcomb Airfield in Gloucestershire, strapped in tight and wearing special gear, she spent more than five minutes in the air and felt safe and wonderfully alive the whole time. When she landed, people were applauding, and Guinness adjudicator Will Munford handed her the official certificate.",
-          "Her flight also raised more than £1,600 for her regional air ambulance charity. The certificate now hangs in her care home, and her motto is simple: never say you can't do something until you've tried. Betty, the previous record holder, sent her congratulations and joked that she's looking forward to turning 100 so she can win the title back."
+          "Not long ago, Helga Duffy had no idea what wing-walking even was: flying through the sky strapped upright on top of a small plane. Then her niece, Jackie Rose, read about Betty Bromage, who had set the world record at 97. Jackie figured her aunt could do it too, and the staff at Helga's assisted-living home cheered her on.",
+          "Three months later, at Rendcomb Airfield in Gloucestershire, Helga was secured to the top of the aircraft and spent more than five minutes in the air. It wasn't easy. Arthritis and a bad right knee made even climbing aboard a challenge. Once up there, though, she felt safe, exhilarated, and amazed by how fresh the air was.",
+          "When she landed, Guinness World Records adjudicator Will Munford handed her an official certificate. It now hangs in her care home, a daily reminder that age really is just a number. Helga, who spent most of her working life as a nurse, also raised more than £1,600 for her regional Air Ambulance charity.",
+          "Her personal rule is simple: never say you can't do something until you've tried it. Betty, the previous record holder, sent her congratulations, joking that she can't wait to turn 100 so she can win the title back."
         ],
         "luogo": "Rendcomb, Gloucestershire, England"
       },
-      "immagine": "immagini/2026-10-18.png"
+      "immagine": "immagini/2026-10-18-people.png"
+    },
+    {
+      "id": "2026-10-18-planet",
+      "data": "2026-10-18",
+      "area": "planet",
+      "principale": false,
+      "categoria": "animals",
+      "emoji": "🦌",
+      "fonte_nome": "Good News Network",
+      "fonte_url": "https://www.goodnewsnetwork.org/north-americas-largest-wildlife-overpass-is-working-animal-collisions-on-i-25-down-91/",
+      "minuti_lettura": 1,
+      "it": {
+        "titolo": "Colorado, il ponte per gli animali funziona: incidenti giù del 91%",
+        "sottotitolo": "A dieci mesi dall'apertura, il più grande ecodotto del Nordamerica protegge orsi, alci e cervi, e anche chi guida.",
+        "paragrafi": [
+          "Lo scorso dicembre, vicino a Larkspur, in Colorado, è stato aperto sopra l'autostrada Interstate 25 un enorme ponte riservato agli animali selvatici. È il più grande del Nordamerica e uno dei più grandi al mondo: circa 61 metri di larghezza per 64 di lunghezza, quasi 3.900 metri quadrati di natura sospesa sopra sei corsie.",
+          "Il progetto non si ferma al ponte. Sotto la strada passano cinque tunnel pensati per le specie più piccole o timide, e lunghe recinzioni accompagnano gli animali verso i punti di attraversamento sicuri.",
+          "Dopo dieci mesi i numeri parlano chiaro: le collisioni tra veicoli e fauna sono calate del 91%, un punto in più di quanto avevano previsto i tecnici dei trasporti. A usarlo non sono solo orsi, alci e cervi, ma anche antilocapre, rane leopardo e conigli. Una telecamera ha ripreso un'antilocapra mentre lo attraversava: era trent'anni che non se ne vedeva una superare quell'autostrada.",
+          "Ci guadagnano anche le persone. Prima, lungo il tratto tra Larkspur e Monument, si contava in media un incidente al giorno; ora gli incidenti sono crollati e i rallentamenti del traffico sono diminuiti del 9%. Visto il successo, lo Stato sta già valutando altri sei luoghi per nuovi ponti, compreso il primo pensato apposta per le pecore delle Montagne Rocciose."
+        ],
+        "luogo": "Larkspur, Colorado, Stati Uniti"
+      },
+      "en": {
+        "titolo": "Colorado's wildlife bridge is working: collisions down 91%",
+        "sottotitolo": "Ten months after opening, North America's largest wildlife overpass is keeping bears, elk and drivers out of harm's way.",
+        "paragrafi": [
+          "Last December, a massive bridge built just for wild animals opened over Interstate 25 near Larkspur, Colorado. It is the largest of its kind in North America and among the biggest anywhere: 200 feet wide and 209 feet long, covering roughly 41,800 square feet above six lanes of traffic.",
+          "The bridge is only part of the design. Five tunnels beneath the highway give smaller or shyer creatures their own way across, while long stretches of fencing guide animals toward these safe routes.",
+          "Ten months in, the results are striking. Crashes between vehicles and wildlife have fallen by 91%, slightly better than the 90% transportation officials had hoped for. Bears, elk and moose use it, and so do pronghorn, northern leopard frogs and rabbits. One pronghorn was caught on camera crossing, the first recorded doing so in 30 years.",
+          "People benefit too. The Larkspur–Monument corridor used to see about one wildlife crash a day; now those accidents have plummeted, and traffic delays are down 9%. Encouraged by the success, Colorado is scouting six more sites for crossings, including the first overpass designed specifically for Rocky Mountain bighorn sheep."
+        ],
+        "luogo": "Larkspur, Colorado, USA"
+      }
+    },
+    {
+      "id": "2026-10-18-discoveries",
+      "data": "2026-10-18",
+      "area": "discoveries",
+      "principale": false,
+      "categoria": "science",
+      "emoji": "🦐",
+      "fonte_nome": "ANSA Scienza",
+      "fonte_url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/10/16/dragon-agganciato-alla-iss-a-bordo-anche-un-ecosistema-con-alghe-e-gamberi_02fed48c-8490-4903-ad4e-b1790004f4aa.html",
+      "minuti_lettura": 1,
+      "it": {
+        "titolo": "Da Torino allo spazio: 51 studenti mandano un mini mare sulla Iss",
+        "sottotitolo": "Un piccolo ecosistema con alghe e gamberetti, ideato da giovani europei e americani, è arrivato sulla Stazione spaziale.",
+        "paragrafi": [
+          "Dopo due giorni di viaggio, la navetta cargo Dragon si è agganciata da sola al modulo Harmony della Stazione spaziale internazionale. Trasportava 2.850 chili di rifornimenti e materiali scientifici e, tra le casse, un passeggero speciale: un minuscolo mondo acquatico popolato da alghe, gamberetti e microrganismi.",
+          "Si chiama Scampi ed è un esperimento costruito da 51 studenti di 11 istituti europei e statunitensi. A guidare il gruppo sono il Politecnico di Torino e l'École Polytechnique di Parigi, con il sostegno dell'Agenzia spaziale europea.",
+          "Il piccolo ecosistema verrà sistemato nel modulo europeo Columbus. Per tutto il tempo della permanenza in orbita, studenti e ricercatori ne seguiranno l'evoluzione e raccoglieranno dati, per capire come la microgravità cambia i legami tra gli esseri viventi e l'ambiente che li circonda.",
+          "L'obiettivo guarda lontano. Conoscere meglio gli ecosistemi chiusi, capaci di reggersi da soli, potrebbe aiutare un giorno a mantenere in vita gli astronauti durante le lunghe missioni verso la Luna e Marte. E a fare un passo in quella direzione, questa volta, sono stati dei ragazzi."
+        ],
+        "luogo": "Torino, Italia – Stazione spaziale internazionale"
+      },
+      "en": {
+        "titolo": "From Turin to orbit: 51 students send a tiny sea to the ISS",
+        "sottotitolo": "A miniature ecosystem of algae and shrimp, designed by young people in Europe and the US, has reached the space station.",
+        "paragrafi": [
+          "After a two-day trip, a Dragon cargo capsule docked on its own with the Harmony module of the International Space Station. It carried 2,850 kilograms of supplies and scientific gear, plus one unusual passenger: a tiny aquatic world of algae, small shrimp and microorganisms.",
+          "The experiment is called Scampi, and it was built by 51 students from 11 institutions across Europe and the United States. Their consortium is led by the Polytechnic University of Turin and École Polytechnique in Paris, under the umbrella of the European Space Agency.",
+          "The little ecosystem will be set up inside Europe's Columbus module. While it is in orbit, students and researchers will watch how it develops and collect data on how microgravity shapes the relationships between its living and non-living parts.",
+          "The bigger goal is far from Earth. Understanding closed, self-sustaining ecosystems could one day help keep astronauts alive on long journeys to the Moon and Mars. This time, a step in that direction was taken by students."
+        ],
+        "luogo": "Turin, Italy – International Space Station"
+      },
+      "immagine": "immagini/2026-10-18-discoveries.png"
     }
   ]
 }
