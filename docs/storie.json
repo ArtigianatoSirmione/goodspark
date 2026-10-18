@@ -1,4 +1,36 @@
 {
-  "aggiornato": null,
-  "storie": []
+  "aggiornato": "2026-10-18T20:13:52+00:00",
+  "storie": [
+    {
+      "id": "2026-10-18",
+      "data": "2026-10-18",
+      "categoria": "sport",
+      "emoji": "✈️",
+      "fonte_nome": "Good News Network",
+      "fonte_url": "https://www.goodnewsnetwork.org/99-yo-woman-snags-worlds-oldest-wing-walker-title/",
+      "minuti_lettura": 1,
+      "it": {
+        "titolo": "A 99 anni in piedi sull'ala di un aereo: Helga entra nel Guinness",
+        "sottotitolo": "Ha passato la vita a fare l'infermiera e ora è la donna più anziana al mondo ad aver provato il wing-walking, raccogliendo fondi per l'eliambulanza.",
+        "paragrafi": [
+          "Fino a pochi mesi fa Helga Duffy, 99 anni, non sapeva nemmeno cosa fosse il wing-walking, l'acrobazia in cui si vola legati in piedi sopra l'ala di un piccolo aereo. Oggi il Guinness dei primati la riconosce come la donna più anziana al mondo ad averlo fatto.",
+          "Tutto è nato da un'idea della nipote, Jackie Rose. Aveva letto di Betty Bromage, che a 97 anni aveva conquistato lo stesso titolo, e ha pensato che anche la zia potesse farcela. Anche il personale della residenza per anziani dove vive Helga l'ha spinta a provarci. Lei ha accettato: per lei era l'ultima occasione per fare qualcosa di diverso.",
+          "Non era affatto scontato. Helga soffre di artrite e ha un ginocchio destro malandato, e già l'idea di salire sull'aereo la preoccupava. Eppure all'aerodromo di Rendcomb, nel Gloucestershire, ben assicurata e con un abbigliamento apposito, è rimasta in volo per più di cinque minuti, sentendosi al sicuro e di ottimo umore. Appena atterrata, tra gli applausi, un giudice del Guinness, Will Munford, le ha consegnato il certificato ufficiale.",
+          "Con la sua impresa ha raccolto anche più di 1.600 sterline per l'ente benefico che gestisce l'eliambulanza della sua regione. Il certificato ora è esposto nella residenza, e il suo motto è semplice: mai dire che non ce la fai prima di averci provato. Betty, la primatista precedente, le ha fatto i complimenti, scherzando che non vede l'ora di compiere 100 anni per riprendersi il record."
+        ],
+        "luogo": "Rendcomb, Gloucestershire (Inghilterra)"
+      },
+      "en": {
+        "titolo": "At 99, Helga stood on a plane's wing and set a world record",
+        "sottotitolo": "After a lifetime working as a nurse, she has become the world's oldest female wing-walker, raising money for an air ambulance charity along the way.",
+        "paragrafi": [
+          "A few months ago, Helga Duffy had never even heard of wing-walking, the stunt where you fly strapped upright on top of a small plane. Now, at 99, Guinness World Records has named her the oldest woman in the world to have done it.",
+          "The idea came from her niece, Jackie Rose. She had seen news reports about Betty Bromage, who took the same title at 97, and decided her aunt could do it too. Staff at Helga's assisted-living home also encouraged her to give it a go. Helga saw it as her last chance to do something different, and she said yes.",
+          "It wasn't easy. Helga has arthritis and a bad right knee, and just getting into the plane worried her. Still, at Rendcomb Airfield in Gloucestershire, strapped in tight and wearing special gear, she spent more than five minutes in the air and felt safe and wonderfully alive the whole time. When she landed, people were applauding, and Guinness adjudicator Will Munford handed her the official certificate.",
+          "Her flight also raised more than £1,600 for her regional air ambulance charity. The certificate now hangs in her care home, and her motto is simple: never say you can't do something until you've tried. Betty, the previous record holder, sent her congratulations and joked that she's looking forward to turning 100 so she can win the title back."
+        ],
+        "luogo": "Rendcomb, Gloucestershire, England"
+      }
+    }
+  ]
 }
