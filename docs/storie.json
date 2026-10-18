@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-18T20:31:47+00:00",
+  "aggiornato": "2026-10-18T20:59:13+00:00",
   "storie": [
     {
       "id": "2026-10-18-people",
@@ -66,7 +66,8 @@
           "People benefit too. The Larkspur–Monument corridor used to see about one wildlife crash a day; now those accidents have plummeted, and traffic delays are down 9%. Encouraged by the success, Colorado is scouting six more sites for crossings, including the first overpass designed specifically for Rocky Mountain bighorn sheep."
         ],
         "luogo": "Larkspur, Colorado, USA"
-      }
+      },
+      "immagine": "immagini/2026-10-18-planet.png"
     },
     {
       "id": "2026-10-18-discoveries",
