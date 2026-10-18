@@ -59,7 +59,8 @@ struct StoriaView: View {
             }
             .padding(20)
         }
-        .frame(height: 340)
+        // Alta abbastanza perché il centro dell'illustrazione resti ben sotto la Dynamic Island
+        .frame(height: 440)
     }
 
     private var altreStorie: some View {

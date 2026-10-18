@@ -36,6 +36,8 @@ MAX_STORIE_ARCHIVIO = 1000
 ORE_RECENTI = 72
 MAX_CANDIDATE_PER_FONTE = 15
 PUNTEGGIO_MINIMO = 7
+# Goodspark pubblica solo storie davvero speciali: questa è l'asticella più importante
+BELLEZZA_MINIMA = 8
 
 # Le tre aree dell'app e le categorie che contengono.
 # Gli identificativi restano in inglese: l'app li mostra tradotti nella lingua del telefono.
@@ -67,10 +69,13 @@ SCHEMA_STORIA = {
         "categoria": {"type": "string", "enum": CATEGORIE},
         "emoji": {"type": "string"},
         "punteggio_positivita": {"type": "integer"},
+        "punteggio_bellezza": {"type": "integer"},
         "it": SCHEMA_TESTO,
         "en": SCHEMA_TESTO,
     },
-    "required": ["area", "indice_candidata", "categoria", "emoji", "punteggio_positivita", "it", "en"],
+    "required": [
+        "area", "indice_candidata", "categoria", "emoji", "punteggio_positivita", "punteggio_bellezza", "it", "en",
+    ],
     "additionalProperties": False,
 }
 
@@ -98,9 +103,17 @@ toccante e indica la sua area in area_principale.
 
 Ti verrà data una lista di notizie recenti (titolo, breve estratto, link). Il tuo compito:
 
+Goodspark pubblica solo storie VERAMENTE BELLE: storie che emozionano, che restano in \
+mente, che verrebbe voglia di raccontare a qualcuno a cena. Un gesto straordinario di una \
+persona comune, un'impresa che sembra impossibile, la natura che sorprende, una scoperta \
+che fa sognare. NON vanno bene notizie corrette ma ordinarie: annunci istituzionali, \
+leggi, convegni, bandi, dati economici, inaugurazioni, premi aziendali, dibattiti, \
+iniziative generiche descritte senza persone né momenti concreti.
+
 1. Per ogni area scegli la notizia migliore secondo questi criteri, in ordine di importanza:
    - è un fatto vero e verificabile, riportato da una fonte seria;
-   - è autenticamente positiva e lascia un sorriso o speranza;
+   - è autenticamente positiva e lascia un sorriso, commozione, meraviglia o speranza;
+   - è evocativa: ha un protagonista, un'immagine forte, un momento che si può quasi vedere;
    - NON è una storia positiva solo in apparenza dentro una tragedia (guerre, morti, \
 disastri, crimini, malattie gravi in primo piano), NON è politica di parte, NON è \
 pubblicità di un prodotto o di un'azienda, NON è gossip;
@@ -122,14 +135,20 @@ stile e frasi completamente originali;
    - non inventare nulla: niente dettagli, nomi, numeri o dichiarazioni che non siano \
 nell'articolo.
 
-Stile, per entrambe le lingue: caldo, semplice, sincero, mai sdolcinato o enfatico. \
+Stile, per entrambe le lingue: caldo, semplice, sincero e evocativo, mai sdolcinato o \
+enfatico. Apri con una scena o un'immagine concreta che porti il lettore lì, poi racconta \
+cosa è successo e perché conta, e chiudi con una frase che lasci qualcosa. Usa solo \
+dettagli presenti nell'articolo: l'emozione nasce dai fatti, non dagli aggettivi. \
 Titolo breve (massimo 70 caratteri), un sottotitolo di una frase, 3-5 paragrafi brevi \
 (in tutto 180-280 parole). Il luogo è la città e/o il paese della storia, scritto nella \
 lingua della versione (es. "Monaco di Baviera" / "Munich"). Un solo emoji adatto. \
 La categoria deve appartenere all'area della storia.
 
 punteggio_positivita va da 1 a 10: quanto la storia è vera, positiva e adatta a tutti. \
-Sii severo: non proporre storie sotto 7."""
+punteggio_bellezza va da 1 a 10: quanto è emozionante, evocativa e memorabile (10 = una \
+storia che commuove e si racconta agli amici; 5 = una notizia corretta ma che si dimentica). \
+Sii molto severo: non proporre storie con positività sotto 7 o bellezza sotto 8. È normale \
+e giusto che in certi giorni un'area resti vuota."""
 
 
 def adesso_italia() -> datetime:
@@ -253,7 +272,9 @@ def motivo_scarto(storia: dict, candidate: list, indici_usati: set) -> str | Non
     if storia["categoria"] not in AREE[storia["area"]]:
         return f"categoria '{storia['categoria']}' fuori dall'area '{storia['area']}'"
     if storia["punteggio_positivita"] < PUNTEGGIO_MINIMO:
-        return f"punteggio troppo basso ({storia['punteggio_positivita']})"
+        return f"positività troppo bassa ({storia['punteggio_positivita']})"
+    if storia["punteggio_bellezza"] < BELLEZZA_MINIMA:
+        return f"non abbastanza bella ({storia['punteggio_bellezza']})"
     for lingua in LINGUE:
         testo = storia[lingua]
         parole = sum(len(p.split()) for p in testo["paragrafi"])
